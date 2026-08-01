@@ -2,8 +2,8 @@ import google.genai as genai
 import streamlit as st
 
 
-GOOGLE_API_KEY = st.secrets["GEMINI_API_KEY"]
-client = genai.Client(api_key=GOOGLE_API_KEY)
+
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 st.title("BMI Calculator with AI Nutritionist")
 wt = st.number_input("Enter your weight in kilograms: ")
